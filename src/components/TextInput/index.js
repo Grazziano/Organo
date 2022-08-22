@@ -1,11 +1,11 @@
 import React from 'react';
 import './TextInput.css';
 
-function TextInput() {
+function TextInput(props) {
   return (
     <div className="text-input">
-      <label>Nome</label>
-      <input placeholder="Digite o seu nome" />
+      <label>{props.label}</label>
+      <input placeholder={props.placeholder} />
     </div>
   );
 }
