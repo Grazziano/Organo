@@ -1,8 +1,18 @@
 import React from 'react';
 import TextInput from '../TextInput';
+import Dropdown from '../Dropdown';
 import './Form.css';
 
 function index() {
+  const times = [
+    'Programação',
+    'Frontend',
+    'Data Science',
+    'Devops',
+    'UX e Design',
+    'Inovação e Gestão',
+  ];
+
   return (
     <section className="form">
       <form>
@@ -10,6 +20,7 @@ function index() {
         <TextInput label="Nome" placeholder="Digite seu nome" />
         <TextInput label="Cargo" placeholder="Digite seu cargo" />
         <TextInput label="Imagem" placeholder="Digite o endereço da imagem" />
+        <Dropdown label="Time" itens={times} />
       </form>
     </section>
   );
