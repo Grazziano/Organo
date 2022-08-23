@@ -1,6 +1,7 @@
 import React from 'react';
 import TextInput from '../TextInput';
 import Dropdown from '../Dropdown';
+import Button from '../Button';
 import './Form.css';
 
 function index() {
@@ -21,6 +22,7 @@ function index() {
         <TextInput label="Cargo" placeholder="Digite seu cargo" />
         <TextInput label="Imagem" placeholder="Digite o endereço da imagem" />
         <Dropdown label="Time" itens={times} />
+        <Button>Criar card</Button>
       </form>
     </section>
   );
