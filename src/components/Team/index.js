@@ -7,7 +7,16 @@ function Team(props) {
   return (
     <section className="team" style={css}>
       <h3 style={{ borderColor: props.primaryColor }}>{props.name}</h3>
-      <Card />
+      <div className="collaborators">
+        {props.collaborators.map((collaborator) => (
+          <Card
+            key={collaborator.name}
+            name={collaborator.name}
+            office={collaborator.office}
+            image={collaborator.image}
+          />
+        ))}
+      </div>
     </section>
   );
 }

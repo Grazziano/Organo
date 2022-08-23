@@ -1,15 +1,15 @@
 import React from 'react';
 import './Card.css';
 
-function Card(props) {
+function Card({ name, image, office }) {
   return (
     <div className="card">
       <div className="card-header">
-        <img src="https://github.com/Grazziano.png" alt="Grazziano Fagundes" />
+        <img src={image} alt={name} />
       </div>
       <div className="card-footer">
-        <h4>Grazziano</h4>
-        <h5>FrontEnd Developer</h5>
+        <h4>{name}</h4>
+        <h5>{office}</h5>
       </div>
     </div>
   );
