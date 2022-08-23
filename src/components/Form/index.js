@@ -11,6 +11,7 @@ function Form(props) {
     'Data Science',
     'Devops',
     'UX e Design',
+    'Mobile',
     'Inovação e Gestão',
   ];
 
