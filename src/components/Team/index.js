@@ -12,6 +12,7 @@ function Team(props) {
           {props.collaborators.map((collaborator) => (
             <Card
               key={collaborator.name}
+              backgroundColor={props.primaryColor}
               name={collaborator.name}
               office={collaborator.office}
               image={collaborator.image}

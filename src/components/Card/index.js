@@ -1,10 +1,10 @@
 import React from 'react';
 import './Card.css';
 
-function Card({ name, image, office }) {
+function Card({ name, image, office, backgroundColor }) {
   return (
     <div className="card">
-      <div className="card-header">
+      <div className="card-header" style={{ backgroundColor }}>
         <img src={image} alt={name} />
       </div>
       <div className="card-footer">

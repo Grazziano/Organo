@@ -10,6 +10,7 @@ function Dropdown(props) {
         required={props.required}
         value={props.value}
       >
+        <option key=""></option>
         {props.itens.map((item) => {
           return <option key={item}>{item}</option>;
         })}
