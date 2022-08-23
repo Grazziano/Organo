@@ -5,16 +5,6 @@ import Button from '../Button';
 import './Form.css';
 
 function Form(props) {
-  const times = [
-    'Programação',
-    'Frontend',
-    'Data Science',
-    'Devops',
-    'UX e Design',
-    'Mobile',
-    'Inovação e Gestão',
-  ];
-
   const [name, setName] = useState('');
   const [office, setOffice] = useState('');
   const [image, setImage] = useState('');
@@ -57,7 +47,7 @@ function Form(props) {
         />
         <Dropdown
           label="Time"
-          itens={times}
+          itens={props.teams}
           required={true}
           value={team}
           setValue={(value) => setTeam(value)}
