@@ -1,11 +1,15 @@
 import React from 'react';
 import './Dropdown.css';
 
-function index(props) {
+function Dropdown(props) {
   return (
     <div className="dropdown">
       <label>{props.label}</label>
-      <select required={props.required}>
+      <select
+        onChange={(event) => props.setValue(event.target.value)}
+        required={props.required}
+        value={props.value}
+      >
         {props.itens.map((item) => {
           return <option key={item}>{item}</option>;
         })}
@@ -14,4 +18,4 @@ function index(props) {
   );
 }
 
-export default index;
+export default Dropdown;
