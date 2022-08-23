@@ -14,14 +14,19 @@ function index() {
     'Inovação e Gestão',
   ];
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('Submitido');
+  };
+
   return (
     <section className="form">
-      <form>
+      <form onSubmit={handleSubmit}>
         <h2>Preencha os dados para criar o card do colaborador.</h2>
-        <TextInput label="Nome" placeholder="Digite seu nome" />
-        <TextInput label="Cargo" placeholder="Digite seu cargo" />
+        <TextInput label="Nome" placeholder="Digite seu nome" required={true} />
+        <TextInput label="Cargo" placeholder="Digite seu cargo" required={true} />
         <TextInput label="Imagem" placeholder="Digite o endereço da imagem" />
-        <Dropdown label="Time" itens={times} />
+        <Dropdown label="Time" itens={times} required={true} />
         <Button>Criar card</Button>
       </form>
     </section>
