@@ -4,7 +4,7 @@ import Dropdown from '../Dropdown';
 import Button from '../Button';
 import './Form.css';
 
-function Form() {
+function Form(props) {
   const times = [
     'Programação',
     'Frontend',
@@ -21,7 +21,13 @@ function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(name, office, image);
+
+    props.whenRegisteringCollaborator({
+      name,
+      office,
+      image,
+      team,
+    });
   };
 
   return (
